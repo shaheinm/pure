@@ -115,7 +115,7 @@ prompt_pure_preprompt_render() {
 	local -a preprompt_parts
 
 	# Set the path.
-	preprompt_parts+=('%F{blue}%d%f')
+	preprompt_parts+=('%F{blue}%c%f')
 
 	# Add git branch and dirty status info.
 	typeset -gA prompt_pure_vcs_info
