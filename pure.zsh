@@ -117,9 +117,9 @@ prompt_pure_preprompt_render() {
 
 	# Set the path.
 	if [[ $FULLDIR == "true" ]]; then
-		preprompt_parts+=(${PURE_PROMPT_PRE:-$default_prompt_pre}'%F{blue}%~%f')
+		preprompt_parts+=(${PURE_PROMPT_PRE:-$default_prompt_pre}'%~%f')
 	else
-		preprompt_parts+=(${PURE_PROMPT_PRE:-$default_prompt_pre}'%F{blue}%c%f')
+		preprompt_parts+=(${PURE_PROMPT_PRE:-$default_prompt_pre}'%c%f')
 	fi
 
 	# Add git branch and dirty status info.
