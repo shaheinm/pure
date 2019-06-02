@@ -113,12 +113,13 @@ prompt_pure_preprompt_render() {
 
 	# Initialize the preprompt array.
 	local -a preprompt_parts
+	local default_prompt_pre='%F{blue}'
 
 	# Set the path.
 	if [[ $FULLDIR == "true" ]]; then
-		preprompt_parts+=('%F{blue}%~%f')
+		preprompt_parts+=(${PURE_PROMPT_PRE:-$default_prompt_pre}'%F{blue}%~%f')
 	else
-		preprompt_parts+=('%F{blue}%c%f')
+		preprompt_parts+=(${PURE_PROMPT_PRE:-$default_prompt_pre}'%F{blue}%c%f')
 	fi
 
 	# Add git branch and dirty status info.
